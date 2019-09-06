@@ -8,7 +8,7 @@ public class DebugToTextFile implements Debug {
 
     public DebugToTextFile() {
         try {
-            FileWriter outputFile = new FileWriter("log.text");
+            FileWriter outputFile = new FileWriter("log.txt");
             out = new PrintWriter(outputFile);
         } catch (IOException e) {
             e.printStackTrace();
