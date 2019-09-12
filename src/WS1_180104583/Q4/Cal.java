@@ -3,8 +3,8 @@ package WS1_180104583.Q4;
 public class Cal {
     Debug debug;
 
-    public Cal() {
-        debug = new DebugToTextFile();
+    public Cal(Debug debug) {
+        this.debug = debug;
     }
 
     public void compute() {
