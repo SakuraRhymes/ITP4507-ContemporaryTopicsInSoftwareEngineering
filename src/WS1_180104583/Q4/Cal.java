@@ -1,7 +1,7 @@
 package WS1_180104583.Q4;
 
 public class Cal {
-    Debug debug;
+    private Debug debug;
 
     public Cal(Debug debug) {
         this.debug = debug;
