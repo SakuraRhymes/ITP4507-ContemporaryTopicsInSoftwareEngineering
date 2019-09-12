@@ -1,7 +1,7 @@
-package Lab01.Q3;
+package WS1_180104583.Q2;
 
 public class Client {
-    public void doAction(ServerInterface server) {
+    public void doAction(Server server) {
         System.out.println("Client: doAction");
         server.doService();
     }

@@ -1,6 +1,6 @@
-package Lab01.Q3;
+package WS1_180104583.Q2;
 
-public class Lab01Q3 {
+public class Lab01Q2a {
     public static void main(String[] args) {
         Client client = new Client();
         client.doAction(new Server());

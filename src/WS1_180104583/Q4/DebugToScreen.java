@@ -1,4 +1,4 @@
-package Lab01.Q4;
+package WS1_180104583.Q4;
 
 public class DebugToScreen implements Debug {
     public void log(String message){

@@ -1,6 +1,6 @@
-package Lab01.Q2;
+package WS1_180104583.Q3;
 
-public class Server {
+public class Server implements ServerInterface{
     public void doService() {
         System.out.println("Server: doService");
     }

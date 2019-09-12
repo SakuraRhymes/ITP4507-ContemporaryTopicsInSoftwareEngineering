@@ -1,4 +1,4 @@
-package Lab01.Q1;
+package WS1_180104583.Q1;
 
 public class Lab01Q1 {
     public static void main(String[] args) {
