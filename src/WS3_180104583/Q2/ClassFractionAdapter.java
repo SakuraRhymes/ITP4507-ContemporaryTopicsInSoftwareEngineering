@@ -23,22 +23,26 @@ public class ClassFractionAdapter extends LongFraction implements Fraction {
 
     @Override
     public Fraction add(Fraction b) {
-        return new ObjectFractionAdapter(super.plus(new LongFraction(b.getNumerator(), b.getDenominator())));
+        LongFraction longFraction = super.plus(new LongFraction(b.getNumerator(), b.getDenominator()));
+        return new ClassFractionAdapter(longFraction.numerator(), longFraction.denominator());
     }
 
     @Override
     public Fraction add(int b) {
-        return new ObjectFractionAdapter(super.plus(b));
+        LongFraction longFraction = super.plus(b);
+        return new ClassFractionAdapter(longFraction.numerator(), longFraction.denominator());
     }
 
     @Override
     public Fraction subtract(Fraction b) {
-        return new ObjectFractionAdapter(super.minus(new LongFraction(b.getNumerator(), b.getDenominator())));
+        LongFraction longFraction = super.minus(new LongFraction(b.getNumerator(), b.getDenominator()));
+        return new ClassFractionAdapter(longFraction.numerator(), longFraction.denominator());
     }
 
     @Override
     public Fraction subtract(int b) {
-        return new ObjectFractionAdapter(super.minus(b));
+        LongFraction longFraction = super.minus(b);
+        return new ClassFractionAdapter(longFraction.numerator(), longFraction.denominator());
     }
 
     @Override

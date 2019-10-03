@@ -40,7 +40,7 @@ public class Account {
         _customer = customer;
     }
 
-    Customer getCustomer() {
+    public Customer getCustomer() {
         return _customer;
     }
 }
