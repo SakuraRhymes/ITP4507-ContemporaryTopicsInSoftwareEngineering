@@ -5,6 +5,7 @@ package WS3_180104583.Q3.KWBank;
  * <p>Description: </p>
  * <p>Copyright: Copyright (c) 2004</p>
  * <p>Company: </p>
+ *
  * @author Dr. Clarence LAU
  * @version 1.0
  */
@@ -39,7 +40,7 @@ public class InternationalAccount {
         if (_currency.equals(HKD))
             return _balance;
         else
-            return _balance/_calculator.HKD2USD(1.0);
+            return _balance / _calculator.HKD2USD(1.0);
     }
 
     public double showBalanceInUSD() {

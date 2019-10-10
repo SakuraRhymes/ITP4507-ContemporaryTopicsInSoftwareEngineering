@@ -5,6 +5,7 @@ package WS3_180104583.Q3.KWBank;
  * <p>Description: </p>
  * <p>Copyright: Copyright (c) 2004</p>
  * <p>Company: </p>
+ *
  * @author Dr. Clarence LAU
  * @version 1.0
  */
@@ -32,6 +33,7 @@ public class Client {
     public String getAddress() {
         return _address;
     }
+
     public void addInternationalAccount(InternationalAccount account) {
         _internalAccounts.add(account);
     }

@@ -2,16 +2,15 @@ package WS3_180104583.Q3.KWBank;
 
 import WS3_180104583.Q3.BankOne.*;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 public class ClientObjectAdapter extends Client {
     private Customer customer;
-    private Vector internationalAccountAdapters;
 
     public ClientObjectAdapter(Customer customer) {
-        super("", "");
+        super();
         this.customer = customer;
-        internationalAccountAdapters = new Vector();
     }
 
     @Override
@@ -25,17 +24,27 @@ public class ClientObjectAdapter extends Client {
     }
 
     @Override
-    public void addInternationalAccount(InternationalAccount internationalAccount) {
-        internationalAccountAdapters.add(internationalAccount);
+    public void addInternationalAccount(InternationalAccount internationalAccountObjectAdapter) {
+        Account account = new Account(internationalAccountObjectAdapter.getAccountNumber(), internationalAccountObjectAdapter.showBalance());
+        customer.addAccount(account);
     }
 
     @Override
-    public void removeInternationalAccount(InternationalAccount internationalAccount) {
-        internationalAccountAdapters.remove(internationalAccount);
+    public void removeInternationalAccount(InternationalAccount internationalAccountObjectAdapter) {
+        customer.removeAccount(((InternationalAccountObjectAdapter) internationalAccountObjectAdapter).getAccount());
     }
 
     @Override
     public Enumeration getInternationalAccounts() {
-        return internationalAccountAdapters.elements();
+        Vector internalAccounts = new Vector();
+        Enumeration accounts = customer.getAccounts();
+        while (accounts.hasMoreElements()) {
+            internalAccounts.add(new InternationalAccountObjectAdapter((Account) accounts.nextElement()));
+        }
+        return internalAccounts.elements();
+    }
+
+    public Customer getCustomer() {
+        return customer;
     }
 }

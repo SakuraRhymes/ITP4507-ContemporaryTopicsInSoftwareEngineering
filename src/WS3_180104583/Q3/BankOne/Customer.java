@@ -5,6 +5,7 @@ package WS3_180104583.Q3.BankOne;
  * <p>Description: </p>
  * <p>Copyright: Copyright (c) 2004</p>
  * <p>Company: </p>
+ *
  * @author Dr. Clarence LAU
  * @version 1.0
  */
@@ -29,6 +30,7 @@ public class Customer {
     public String getAddress() {
         return _address;
     }
+
     public void addAccount(Account account) {
         _accounts.add(account);
     }
