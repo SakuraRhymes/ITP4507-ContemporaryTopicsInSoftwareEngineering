@@ -1,6 +1,7 @@
-package WS3_180104583.Q3.KWBank;
+package WS3_180104583.Q3.SuperBank;
 
 import WS3_180104583.Q3.BankOne.*;
+import WS3_180104583.Q3.KWBank.*;
 
 public class InternationalAccountObjectAdapter extends InternationalAccount {
     private Account account;

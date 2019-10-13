@@ -1,4 +1,4 @@
-package WS3_180104583.Q3.KWBank;
+package WS3_180104583.Q3.SuperBank;
 
 /**
  * <p>Title: </p>
@@ -10,8 +10,8 @@ package WS3_180104583.Q3.KWBank;
  * @version 1.0
  */
 
-import WS3_180104583.Q3.BankOne.Account;
-import WS3_180104583.Q3.BankOne.Customer;
+import WS3_180104583.Q3.BankOne.*;
+import WS3_180104583.Q3.KWBank.*;
 
 import java.util.*;
 
