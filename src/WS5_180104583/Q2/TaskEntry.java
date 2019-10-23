@@ -25,7 +25,7 @@ public class TaskEntry {
         this.timeLastDone = timeLastDone;
     }
 
-    public void performTask(){
+    public void performTask() {
         task.performTask();
     }
 }

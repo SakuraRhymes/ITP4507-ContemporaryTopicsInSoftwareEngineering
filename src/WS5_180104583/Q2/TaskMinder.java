@@ -19,7 +19,7 @@ public class TaskMinder extends Thread {
                 now = System.currentTimeMillis();
 
                 for (TaskEntry taskEntry : taskEntries) {
-                    if (taskEntry.getRepeatInterval() + taskEntry.getTimeLastDone() <= now){
+                    if (taskEntry.getRepeatInterval() + taskEntry.getTimeLastDone() <= now) {
                         taskEntry.performTask();
                         taskEntry.setTimeLastDone(now);
                     }

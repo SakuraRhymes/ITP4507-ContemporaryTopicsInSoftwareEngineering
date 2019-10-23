@@ -1,7 +1,7 @@
 package WS5_180104583.Q2;
 
 public class TestCommandPattern {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         TaskMinder tm = new TaskMinder(100);
 
         NextNumberTask next = new NextNumberTask();

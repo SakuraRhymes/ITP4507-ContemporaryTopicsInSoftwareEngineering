@@ -2,7 +2,7 @@ package WS5_180104583.Q3;
 
 import java.util.Vector;
 
-public class DeleteShapeCommandFactory extends AbstractCommandFactory{
+public class DeleteShapeCommandFactory extends AbstractCommandFactory {
     private Vector<Shape> shapes;
 
     public DeleteShapeCommandFactory(Vector<Shape> shapes) {
