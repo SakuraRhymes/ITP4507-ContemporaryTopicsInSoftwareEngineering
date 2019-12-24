@@ -1,4 +1,19 @@
 {
-  "suit": 3,
-  "number": 11
+  "cards": [
+    {
+      "id": 1,
+      "suit": 3,
+      "number": 11
+    },
+    {
+      "id": 2,
+      "suit": 5,
+      "number": 7
+    },
+    {
+      "id": 3,
+      "suit": 1,
+      "number": 8
+    }
+  ]
 }
