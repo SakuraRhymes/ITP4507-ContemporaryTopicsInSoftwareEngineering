@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name) {
+        this.name = name;
+    }
+
+    Person.prototype.getName = function () {
+        return this.name;
+    };
+
+    function Author(name, books) {
+        this.name = name;
+        this.books = books;
+    }
+
+    function extend(subClass, superClass) {
+        let F = function () {
+        };
+        F.prototype = superClass.prototype;
+        subClass.prototype = new F();
+        subClass.prototype.constructor = subClass;
+        subClass.superclass = superClass.prototype;
+        if (superClass.prototype.constructor == Object.prototype.constructor) {
+            superClass.prototype.constructor = superClass;
+        }
+    }
+
+    extend(Author, Person);
+
+    Author.prototype.getBooks = function () {
+        return this.books;
+    };
+
+    person = new Person("John Smith");
+    authors = [new Author("Dustin Diaz", ["JavaScript Design Patterns"]), new Author("Ross Harmes", ["JavaScript Design Patterns"])];
+
+    console.log(person.getName());
+    authors.forEach(function (author) {
+            console.log(author.getName());
+            console.log(author.getBooks()[0]);
+        }
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Calculation Result</h1>
+<table border="1">
+    <tr>
+        <td>Circle Area = <span id="circleArea"></span></td>
+    </tr>
+    <tr>
+        <td>Sphere Area = <span id="sphereArea"></span></td>
+    </tr>
+    <tr>
+        <td>Sphere Volume = <span id="sphereVolume"></span></td>
+    </tr>
+</table>
+<p>Click Refresh (or Reload) to run the script again</p>
+<script>
+    let pi = Math.PI;
+    let radius = parseInt(window.prompt("Enter Radius:"));
+    document.getElementById("circleArea").innerText = pi * radius * radius;
+    document.getElementById("sphereArea").innerText = 4 * pi * radius * radius;
+    document.getElementById("sphereVolume").innerText = (4 / 3) * pi * radius * radius * radius;
+</script>
+</body>
+</html>

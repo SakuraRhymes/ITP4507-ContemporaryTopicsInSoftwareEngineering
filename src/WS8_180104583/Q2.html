@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Cat(name, gender) {
+        this.name = name;
+        this.gender = gender;
+    }
+
+    Cat.prototype.setName = function (name) {
+        this.name = name;
+    };
+
+    Cat.prototype.getName = function () {
+        return this.name;
+    };
+
+    Cat.prototype.setGender = function (gender) {
+        this.gender = gender;
+    };
+
+    Cat.prototype.getGender = function () {
+        return this.gender;
+    };
+
+    function printCat(cat) {
+        document.write(`class: cat<br>`);
+        document.write(`cat.name: ${cat.name}<br>`);
+        document.write(`cat.gender: ${cat.gender}<br>`);
+        document.write(`<br>`);
+    }
+
+    document.write(`Create a cat object using constructor<br>`);
+    cat = new Cat("Thomas", "male");
+    printCat(cat);
+
+    document.write(`Change the properties using set Methods<br>`);
+    cat.setName("Kitty");
+    cat.setGender("female");
+    printCat(cat);
+</script>
+</body>
+</html>

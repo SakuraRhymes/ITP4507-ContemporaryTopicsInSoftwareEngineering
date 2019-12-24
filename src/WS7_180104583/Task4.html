@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function begin() {
+        let num1 = Math.floor(Math.random() * 9) + 1;
+        let num2 = Math.floor(Math.random() * 9) + 1;
+        let answer = num1 * num2;
+        while (true) {
+            let userAnswer = window.prompt(`How much is ${num1} times ${num2} ?`);
+            if (parseInt(userAnswer) === answer) {
+                alert("Very good!");
+                break;
+            } else {
+                alert("No. Please try again.");
+            }
+        }
+    }
+
+    begin();
+    while (window.prompt("Would you like to answer another question? (yes or no)", "yes") === "yes") {
+        begin();
+    }
+</script>
+</body>
+</html>

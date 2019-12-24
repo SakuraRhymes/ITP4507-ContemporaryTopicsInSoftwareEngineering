@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Grandparent(name) {
+        this.name = name;
+    }
+
+    function Parent() {
+
+    }
+
+    function Child() {
+
+    }
+
+    function printName() {
+        console.log(`kid.name = ${kid.name}`);
+        console.log(`adult.name = ${adult.name}`);
+        console.log(`elder.name = ${elder.name}`);
+    }
+
+    let elder = new Grandparent("anonymous");
+    let adult = new Parent();
+    let kid = new Child();
+
+    kid.__proto__ = adult;
+    adult.__proto__ = elder;
+
+    console.log("After objects creation");
+    printName();
+
+    kid.name = "Chris";
+    adult.name = "Bob";
+    elder.name = "Andy";
+
+    console.log("After update the name of objects");
+    printName();
+</script>
+</body>
+</html>
